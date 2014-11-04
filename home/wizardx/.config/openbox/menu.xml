@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+<menu id="apps-top-menu" label="Top Sec Tools">
+  <item icon=".config/openbox/icons/kali_menu/application.png" label="metasploit">
+      <action name="Execute">
+          <command>urxvt -title 'metasploit' -e sh -c "sudo /opt/metasploit/app/msfconsole; zsh -l"</command>
+      </action>
+  </item>
+  <item icon=".config/openbox/icons/kali_menu/application.png" label="w3af">
+      <action name="Execute">
+          <command>/opt/w3af/./w3af_gui</command>
+      </action>
+  </item>
+<!-- <item icon=".config/openbox/icons/kali_menu/application.png" label="nessus">-->
+      <!--<action name="Execute">-->
+          <!--<command>nessus</command>-->
+      <!--</action>-->
+  <!--</item>-->
+  <item icon=".config/openbox/icons/kali_menu/application.png" label="OpenVas">
+      <action name="Execute">
+          <command>openvas</command>
+      </action>
+  </item>
+  <item icon=".config/openbox/icons/kali_menu/application.png" label="sqlmap">
+      <action name="Execute">
+          <command>urxvt -title 'sqlmap' -e sh -c "python2 /opt/sqlmap/sqlmap.py -h; zsh -l"</command>
+      </action>
+  </item>
+  <item icon=".config/openbox/icons/kali_menu/application.png" label="nmap">
+      <action name="Execute">
+          <command>urxvt -title 'nmap' -e sh -c "nmap; zsh -l"</command>
+      </action>
+  </item>
+  <item icon=".config/openbox/icons/kali_menu/application.png" label="wireshark">
+      <action name="Execute">
+          <command>wireshark</command>
+      </action>
+  </item>
+  <item icon=".config/openbox/icons/kali_menu/application.png" label="burpsuite">
+      <action name="Execute">
+          <execute>java -jar /opt/BurpSuite_Pro/BurpLoader.jar</execute>
+      </action>
+  </item>
+  <item icon=".config/openbox/icons/kali_menu/application.png" label="john">
+      <action name="Execute">
+          <command>urxvt -title 'john' -e sh -c "/opt/john-1.8.0/run/john; zsh -l"</command>
+      </action>
+  </item>
+
+  <menu icon=".config/openbox/icons/kali_menu/application.png" id="apps-hydra-menu" label="hydra">
+    <item icon=".config/openbox/icons/kali_menu/application.png" label="dpl4hydra.sh">
+      <action name="Execute">
+          <command>urxvt -e 'dpl4hydra.sh -h ; zsh'</command>
+      </action>
+    </item>
+    <item icon=".config/openbox/icons/kali_menu/application.png" label="hydra">
+      <action name="Execute">
+          <command>urxvt -title 'hydra' -e sh -c "hydra; zsh -l"</command>
+      </action>
+    </item>
+    <item icon=".config/openbox/icons/kali_menu/application.png" label="xhydra">
+      <action name="Execute">
+          <command>xhydra</command>
+      </action>
+    </item>
+  </menu>
+  <item icon=".config/openbox/icons/kali_menu/application.png" label="maltego">
+      <action name="Execute">
+          <command>maltego</command>
+      </action>
+  </item>
+  <item icon=".config/openbox/icons/kali_menu/application.png" label="zaproxy">
+      <action name="Execute">
+          <!--<execute>java -jar /opt/ZAP_2.3.1/zap.jar</execute>-->
+          <command>/opt/ZAP_2.3.1/./zap.sh</command>
+      </action>
+  </item>
+  <item icon=".config/openbox/icons/kali_menu/application.png" label="aircrack-ng">
+      <action name="Execute">
+          <command>urxvt -title 'aircrack-ng' -e sh -c "aircrack-ng; zsh -l"</command>
+      </action>
+  </item>
+</menu>
+
+<menu id="apps-accessories-menu" label="Accessories">
+  <item label="Calculator">
+    <action name="Execute">
+      <command>gnome-calculator</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Character Map">
+    <action name="Execute">
+      <command>gnome-character-map</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Ark File Archiver">
+    <action name="Execute">
+      <command>ark</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-editors-menu" label="Editors">
+  <item label="GVim">
+    <action name="Execute">
+      <command>gvim</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>GVim</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Emacs">
+    <action name="Execute">
+      <command>emacs</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>Emacs</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-ide-menu" label="IDE">
+  <item label="Intellij IDEA">
+    <action name="Execute">
+        <command>/opt/IntelliJIdea/bin/idea.sh</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="PyCharm">
+    <action name="Execute">
+        <command>pycharm.sh</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-term-menu" label="Terminals">
+  <item label="Rxvt Unicode">
+    <action name="Execute">
+      <command>urxvt</command>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-net-menu" label="Internet">
+  <item label="Chrome">
+    <action name="Execute">
+      <command>google-chrome-stable</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>Chrome</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Firefox">
+    <action name="Execute">
+      <command>firefox</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>Firefox</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-multimedia-menu" label="Multimedia">
+  <item label="Ncmpcpp">
+    <action name="Execute">
+      <command>ncmpcpp</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-fileman-menu" label="File Managers">
+  <item label="Thunar">
+    <action name="Execute">
+      <command>Thunar</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Ranger">
+    <action name="Execute">
+      <command>urxvt -hold -e ranger</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-graphics-menu" label="Graphics">
+  <item label="Gimp">
+    <action name="Execute">
+      <command>gimp</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="system-menu" label="System">
+  <item label="Openbox Configuration">
+    <action name="Execute">
+      <command>obconf</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="LXAppearance">
+    <action name="Execute">
+      <command>lxappearance</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="Edit menu.xml">
+    <action name="Execute">
+      <command>gvim ~/.config/openbox/menu.xml</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="Edit rc.xml">
+    <action name="Execute">
+      <command>gvim ~/.config/openbox/rc.xml</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="Edit autostart">
+    <action name="Execute">
+      <command>gvim ~/.config/openbox/autostart</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="Edit .Xdefaults">
+    <action name="Execute">
+      <command>gvim ~/.Xdefaults</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="Edit tint2rc">
+    <action name="Execute">
+      <command>gvim ~/.config/tint2/tint2rc</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="Edit conkyrc">
+    <action name="Execute">
+      <command>gvim ~/.conkyrc</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <separator />
+  <item label="Reconfigure Openbox">
+    <action name="Reconfigure" />
+  </item>
+</menu>
+
+<menu id="system-exit" label="Exit">
+  <item label="Log Out">
+    <action name="Exit">
+      <prompt>yes</prompt>
+    </action>
+  </item>
+  <item label="Hibernate">
+    <action name="Execute">
+     <execute >sudo pm-hibernate</execute>
+    </action>
+  </item>
+  <item label="Suspend">
+    <action name="Execute">
+     <execute >sudo pm-suspend</execute>
+    </action>
+  </item>
+  <item label="Restart">
+    <action name="Execute">
+     <execute >urxvt -e sudo reboot</execute>
+    </action>
+  </item>
+  <item label="PowerOff">
+    <action name="Execute">
+    <execute>urxvt -e sudo poweroff</execute>
+    </action>
+  </item>
+</menu>
+
+<menu id="root-menu" label="Openbox 3">
+  <separator label="Startup" />
+  <item label="Terminal">
+    <action name="Execute">
+      <command>urxvt</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="File Manager">
+    <action name="Execute">
+      <command>Thunar</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Web Browser">
+    <action name="Execute">
+      <command>google-chrome-stable</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>Chrome</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+  <separator label="Pentoo" />
+  <menu id="apps-top-menu"/>
+  <menu id="apps-kali-menu"/>
+  <separator label="Applications" />
+  <menu id="apps-accessories-menu"/>
+  <menu id="apps-editors-menu"/>
+  <menu id="apps-ide-menu"/>
+  <menu id="apps-graphics-menu"/>
+  <menu id="apps-net-menu"/>
+  <menu id="apps-multimedia-menu"/>
+  <menu id="apps-term-menu"/>
+  <menu id="apps-fileman-menu"/>
+  <menu id="system-menu"/>
+  <separator />
+  <menu id="system-exit">
+</menu>
+
+</openbox_menu>
