@@ -1,0 +1,82 @@
+background yes
+use_xft yes
+xftfont Sans:size=8
+xftalpha 1
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_transparent yes
+own_window_type desktop
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size 200 200
+maximum_width 200
+draw_shades yes
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+default_color white
+default_shade_color black
+default_outline_color white
+alignment top_right
+gap_x 12
+gap_y 12
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+
+TEXT
+${font Monaco:bold:size=8}SYSTEM ${hr 2}
+${font Monaco:normal:size=8}$sysname $kernel $alignr $machine
+Host:$alignr$nodename
+Uptime:$alignr$uptime
+$stippled_hr
+${font Monaco:bold:size=8}CPU ${hr 2}
+Freq: ${freq} MHz
+Processes: $processes ($running_processes running)
+Load: $loadavg
+CPU1 -${cpu cpu1}% | CPU2 -${cpu cpu2}%
+CPU3 -${cpu cpu3}% | CPU4 -${cpu cpu4}%
+
+${font Monaco:bold:size=8}MEMORY ${hr 2}
+${font Monaco:normal:size=8}RAM $alignc $mem / $memmax $alignr $memperc%
+$membar
+${font Monaco:normal:size=8}SWAP $alignc ${swap} / ${swapmax} $alignr ${swapperc}%
+${swapbar}
+
+${font Monaco:bold:size=8}DISKS ${hr 2}
+${font Monaco:normal:size=8}/ $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /}%
+${fs_bar /}
+${font Monaco:normal:size=8}/boot $alignc ${fs_used /boot} / ${fs_size /boot} $alignr ${fs_used_perc /boot}%
+${fs_bar /boot}
+${font Monaco:normal:size=8}/usr $alignc ${fs_used /usr} / ${fs_size /usr} $alignr ${fs_used_perc /usr}%
+${fs_bar /usr}
+${font Monaco:normal:size=8}/home $alignc ${fs_used /home} / ${fs_size /home} $alignr ${fs_used_perc /home}%
+${fs_bar /home}
+${font Monaco:normal:size=8}/var $alignc ${fs_used /var} / ${fs_size /var} $alignr ${fs_used_perc /var}%
+${fs_bar /var}
+${font Monaco:normal:size=8}/srv $alignc ${fs_used /srv} / ${fs_size /srv} $alignr ${fs_used_perc /srv}%
+${fs_bar /srv}
+${font Monaco:normal:size=8}/tmp $alignc ${fs_used /tmp} / ${fs_size /tmp} $alignr ${fs_used_perc /tmp}%
+${fs_bar /tmp}
+
+${font Monaco:bold:size=8}TOP PROCESSES ${hr 2}
+${font Monaco:normal:size=8}$font${top_mem name 1}${alignr}${top mem 1} %
+$font${top_mem name 2}${alignr}${top mem 2} %
+$font${top_mem name 3}${alignr}${top mem 3} %
+$font${top_mem name 4}${alignr}${top mem 4} %
+
+${font Monaco:bold:size=8}NETWORK ${hr 2}
+WiFi ${font Monaco:normal:size=8} $alignr ${addr wlp3s0}
+Connection quality: $alignr ${wireless_link_qual_perc wlp3s0}%
+${downspeedgraph wlp4s0}
+DLS:${downspeed wlp4s0} kb/s $alignr total: ${totaldown wlp3s0}
+${upspeedgraph wlp4s0}
+ULS:${upspeed wlp4s0} kb/s $alignr total: ${totalup wlp3s0}
+${font Monaco:bold:size=8}eth0  ${font Monaco:normal:size=8} $alignr ${addr eth0}
+Inbound $alignr ${downspeed eth0} kb/s
+${downspeedgraph eth0}
+Outbound $alignr ${upspeed eth0} kb/s
+${upspeedgraph eth0}
+Public IP:
