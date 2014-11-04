@@ -1,0 +1,68 @@
+!urxvt.background:       #101010
+!urxvt.foreground:       #D2C5BC
+URxvt*background:  #090C19
+URxvt*foreground:  #E6E6E6
+!black
+*color0:#151515
+*color8:#5B5B5B
+!red
+*color1:#CC0000
+*color9:#EF2929
+! green
+*color2:#1AAA13
+*color10:#5DCE33
+! yellow
+*color3:#FF9F3E
+*color11:#E6CB29
+!blue
+*color4:#1D576D
+*color12:#31788E
+!magenta
+*color5:#A70000
+*color13:#DE0000
+!cyan
+*color6:#8292B2
+*color14:#87adfc
+!white
+*color7:#dedede
+*color15:#f2f2f2
+
+URxvt.geometry: 75x27
+!URxvt.titl:urxvt
+URxvt.cursorBlink: True
+
+!!字体设置
+Xft.dpi:96
+URxvt.font:xft:Droid Sans Mono for Powerline:size=10:style=Regular:antialias=true
+URxvt.boldfont:xft:Droid Sans Mono for Powerline:size=10:style=BOld:antialias=true
+!!图标设置
+URxvt.iconFile:/usr/share/icons/Faenza/apps/64/terminal.png
+
+!!滚动条设置
+URxvt.scrollBar:True
+URxvt.scrollBar_right:True
+URxvt.scrollBar_floating:False
+URxvt.scrollstyle:plain
+!URxvt.scrollColor:#999999
+!!滚屏设置
+URxvt.mouseWheelScrollPage:True
+URxvt.scrollTtyOutput:False
+URxvt.scrollWithBuffer:True
+URxvt.scrollTtyKeypress:True
+!!屏幕缓冲行数
+URxvt.saveLines:700
+
+!!Perl Extensions
+URxvt.perl-ext-common:default,clipboard
+!clipboard
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+!禁用到Ctrl+Shift的输入特殊字符功能
+URxvt*iso14755_52: false
+! input method
+URxvt.inputMethod:fcitx
+! tabs
+!URxvt.tabbed.tabbar-fg: 2
+!URxvt.tabbed.tabbar-bg: 0
+!URxvt.tabbed.tab-fg:3
+!URxvt.tabbed.tab-bg:0
