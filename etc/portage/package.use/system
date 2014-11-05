@@ -1,0 +1,4 @@
+>=sys-kernel/dracut-037 device-mapper net
+>=sys-apps/dbus-1.6.18-r1 systemd X
+sys-apps/systemd gudev
+virtual/udev gudev
