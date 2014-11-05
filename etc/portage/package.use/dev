@@ -1,0 +1,14 @@
+# Development - Programming Languages and Environment
+sys-devel/clang python
+sys-devel/llvm clang ocaml python
+
+#required by media-mesa
+dev-libs/libxml2 python
+#required by GoAgent
+dev-libs/nss utils
+
+dev-libs/glibc -mime
+dev-db/sqlite static-libs
+dev-db/postgresql server
+
+dev-lang/python sqlite
