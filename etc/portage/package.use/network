@@ -1,0 +1,12 @@
+>=net-misc/dhcpcd-6.2.0-r1 -udev
+>=net-wireless/wpa_supplicant-2.0-r1 dbus
+net-libs/glib-networking -gnome
+
+
+#GoAgent
+net-proxy/goagent -gtk
+
+#Analyzer
+net-analyzer/wireshark -qt4 geoip lua smi
+net-analyzer/hydra gtk
+#net-analyzer/openvas -pdf
