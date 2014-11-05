@@ -1,0 +1,32 @@
+app-admin/sudo -sendmail
+app-editors/vim cscope python
+app-editors/gvim cscope gtk python
+app-shells/autojump zsh-completion
+
+#X11, WM. DE
+x11-base/xorg-server udev
+x11-libs/cairo X
+x11-libs/gtk+ X
+x11-libs/pango X
+media-libs/imlib2 gif jpeg png X
+x11-themes/gtk-engines-murrine -themes animation-rtl
+
+x11-wm/openbox imlib
+x11-terms/rxvt-unicode 256-color wcwidth fading-colors blink pixbuf xft -vanilla
+x11-misc/tint2 battery
+app-admin/conky lua lua-cairo truetype X
+xfce-base/thunar udev udisks
+
+app-text/ghostscript-gpl cups
+gnome-base/gvfs afp fuse ios udev udisks
+
+##media
+media-libs/gd fontconfig jpeg png truetype
+
+##Layman
+app-portage/layman subversion
+#fcitx
+app-i18n/fcitx gtk
+app-i18n/fcitx-configtool -gtk3 gtk
+#laptop
+#app-laptop/tlp -pm-utils
